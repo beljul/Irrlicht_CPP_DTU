@@ -1,4 +1,4 @@
-// Skeleton of implementation file for groups
+// Swap wall in the opposite side.
 
 #include "game.h"
 #include "field.h"
@@ -14,7 +14,7 @@ T129(ISceneManager* smgr,
     pg(pg)
     // calling the parent constructor 
 {
-  texture=driver->getTexture(texturepath+"st-oxydd.png");
+  texture=driver->getTexture(texturepath+"moon.png");
   block->setMaterialTexture(0,texture);
 };
 
