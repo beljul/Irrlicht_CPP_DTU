@@ -7,7 +7,7 @@
 #include "game.h"
 #include "field.h"
 
-class T129: public Wall // if you implement a Floor tile, replace "Wall" with "Floor"
+class T129: public Wall 
 {
   private:
     playground pg;

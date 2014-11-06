@@ -11,8 +11,8 @@ T129(ISceneManager* smgr,
 	 IVideoDriver* driver,
 	 int x, int y, playground pg) 
   : Wall(smgr,driver,x,y,pg),
-    pg(pg)
     // calling the parent constructor 
+    pg(pg)
 {
   texture=driver->getTexture(texturepath+"moon.png");
   block->setMaterialTexture(0,texture);
