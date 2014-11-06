@@ -14,7 +14,9 @@ protected:
   ITexture *alt_texture;
   T130 *related[260];
   int nbRelated;
-
+  // Boolean to know if the sphere enter in the field normally or jumped on
+  bool jumpOn;
+  
 public:
   T130(ISceneManager* smgr,
       IVideoDriver* driver,
@@ -26,6 +28,16 @@ public:
   virtual void sphereExit(Sphere &s);
   
   virtual void introduceTo(Field &f);
+  
+  inline
+  bool getJumpOn() {
+    return this->jumpOn;
+  }
+  
+  inline
+  void setJumpOn(bool jumpOn) {
+    this->jumpOn = jumpOn;
+  }
   /*
   virtual void handleSphere(Sphere &s, position2di mousemove, f32 frameDeltaTime);
 

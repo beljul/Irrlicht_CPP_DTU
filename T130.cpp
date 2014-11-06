@@ -11,7 +11,8 @@ T130::
 T130(ISceneManager* smgr,
 	 IVideoDriver* driver,
 	 int x, int y, playground pg) 
-  : Floor(smgr,driver,x,y,pg)
+  : Floor(smgr,driver,x,y,pg),
+    jumpOn(false)
 {
   texture=driver->getTexture(texturepath+"fl-bridgex-closed.png");
   block->setMaterialTexture(0,texture); 
@@ -27,6 +28,8 @@ fieldtype T130::getFieldType(){
 void T130::sphereEnter(Sphere &s){
     block->setMaterialTexture(0,alt_texture);
     
+    if(jumpOn == true) return;
+    
     cout << nbRelated << endl;
 
     int random = rand() % nbRelated;
@@ -37,18 +40,20 @@ void T130::sphereEnter(Sphere &s){
     cout << "x: " << before.X << ", y: " << before.Y << ", z: " << before.Z << endl;
     
     vector3df after;
-    after.Z = before.Z + (next->getx() - this->getx())*10;
-    after.X = before.X + (next->gety() - this->gety())*10;
+    after.Z = before.Z + ((next->getx() - this->getx())*160)/20;
+    after.X = before.X + ((next->gety() - this->gety())*160)/20;
     after.Y = before.Y;
     
     cout << "x: " << after.X << ", y: " << after.Y << ", z: " << after.Z << endl;
     
+    next->setJumpOn(true);
     s.setPosition(after);
 
 }
 
 void T130::sphereExit(Sphere &s){
     block->setMaterialTexture(0,texture);
+    jumpOn = false;
 }
 
 void T130::introduceTo(Field &f){
