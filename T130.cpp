@@ -41,7 +41,7 @@ void T130::sphereEnter(Sphere &s){
     
     vector3df after;
     after.Z = before.Z + ((next->getx() - this->getx())*160)/20;
-    after.X = before.X + ((next->gety() - this->gety())*160)/20;
+    after.X = before.X + ((next->gety() - this->gety())*100)/13;
     after.Y = before.Y;
     
     cout << "x: " << after.X << ", y: " << after.Y << ", z: " << after.Z << endl;
