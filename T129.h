@@ -5,17 +5,10 @@
 #define ____TT129____
 
 #include "game.h"
-#include "field.h"
+#include "T1000.h"
 
-class T129: public Wall 
-{
-  private:
-    playground pg;
-    Field* getLeftField();
-    Field* getRightField();
-    Field* getTopField();
-    Field* getBottomField();
-    
+class T129: public T1000 
+{ 
   public:
     T129(ISceneManager* smgr,
         IVideoDriver* driver,
