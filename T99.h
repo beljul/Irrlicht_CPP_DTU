@@ -13,11 +13,15 @@ class T99: public Floor // if you implement a Floor tile, replace "Wall" with "F
     T99(ISceneManager* smgr,
         IVideoDriver* driver,
         int x, int y, playground  pg);
+    
     virtual fieldtype getFieldType();
+    
     void setX(int x);
     void setY(int y);
-  // you need to declare here all (virtual) functions that change with respect to parent class
-  // see example in testfiled.h and testfield.cpp
+
+    //ISceneNode * getBlock();
+    void setPosition(vector3df pos);
+    vector3df getPosition();
 };
 
 

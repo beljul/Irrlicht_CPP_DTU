@@ -9,16 +9,16 @@
 
 class T98: public T1000 // if you implement a Floor tile, replace "Wall" with "Floor"
 {
-public:
-  T98(ISceneManager* smgr,
-      IVideoDriver* driver,
-      int x, int y, playground  pg);
+  public:
+    T98(ISceneManager* smgr,
+        IVideoDriver* driver,
+        int x, int y, playground  pg);
   
-  virtual void sphereOverlap(Sphere &s, f32 xoverlap, f32 yoverlap);
-  virtual fieldtype getFieldType();
-  //virtual void introduceTo(Floor &f);
-  // you need to declare here all (virtual) functions that change with respect to parent class
-  // see example in testfiled.h and testfield.cpp
+    virtual void sphereOverlap(Sphere &s, f32 xoverlap, f32 yoverlap);
+    
+    virtual fieldtype getFieldType();
+    
+    void swapWithField(Field *f);
 };
 
 
