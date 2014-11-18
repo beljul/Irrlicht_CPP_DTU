@@ -23,11 +23,25 @@ fieldtype T99::getFieldType(){
 }
 
 void T99::setX(int x) {
-  this->x = x;
+    this->x = x;
 }
 
 void T99::setY(int y) {
-  this->y = y;
+    this->y = y;
+}
+
+/*
+ISceneNode * T99::getBlock() {
+    return this->block;
+}
+*/
+
+vector3df T99::getPosition() {
+    return this->block->getPosition();
+}
+
+void T99::setPosition(vector3df pos) {
+    this->block->setPosition(pos);
 }
 
 
