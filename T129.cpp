@@ -13,8 +13,8 @@ T129(ISceneManager* smgr,
   : T1000(smgr,driver,x,y,pg)
     // calling the parent constructor 
 {
-  texture=driver->getTexture(texturepath+"moon.png");
-  block->setMaterialTexture(0,texture);
+    texture=driver->getTexture(texturepath+"moon.png");
+    block->setMaterialTexture(0,texture);
 };
 
 void T129::sphereOverlap(Sphere &s, f32 xoverlap, f32 yoverlap) {
