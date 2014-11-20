@@ -16,7 +16,7 @@ T130(ISceneManager* smgr,
     jumpOn(false)
 {
   // Set texture
-  texture=driver->getTexture(texturepath+"fl-bridgex-closed.png");
+  texture=driver->getTexture(texturepath+"portal.png");
   block->setMaterialTexture(0,texture); 
 
   alt_texture=driver->getTexture(texturepath+"fl-plank.png");

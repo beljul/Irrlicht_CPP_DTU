@@ -27,7 +27,7 @@ void T129::sphereOverlap(Sphere &s, f32 xoverlap, f32 yoverlap) {
         rejectSphere(s, xoverlap, yoverlap);
         return;
       }
-      p.Z -= 10;
+      p.Z -= 12;
     }
     // From the left
     else {
@@ -36,7 +36,7 @@ void T129::sphereOverlap(Sphere &s, f32 xoverlap, f32 yoverlap) {
         rejectSphere(s, xoverlap, yoverlap);
         return;
       }
-      p.Z += 10;
+      p.Z += 12;
     }
   }
   
@@ -49,7 +49,7 @@ void T129::sphereOverlap(Sphere &s, f32 xoverlap, f32 yoverlap) {
         rejectSphere(s, xoverlap, yoverlap);
         return;
       }
-      p.X += 10;
+      p.X += 12;
     }
     // From the bottom
     else {
@@ -58,7 +58,7 @@ void T129::sphereOverlap(Sphere &s, f32 xoverlap, f32 yoverlap) {
         rejectSphere(s, xoverlap, yoverlap);
         return;
       }
-      p.X -= 10;
+      p.X -= 12;
     }
   }
   s.setPosition(p);
