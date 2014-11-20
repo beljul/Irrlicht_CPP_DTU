@@ -1,20 +1,27 @@
-// note that your header files must be protected against multiple inclusion using the definition of a special identifier
-// note that you also need the #endif at the end of the file
- 
+// Wall which swap the sphere in the opposite side.
+
+// Against multiple inclusion
 #ifndef ____TT129____
 #define ____TT129____
 
 #include "game.h"
-#include "T1000.h"
+#include "T138.h"
 
-class T129: public T1000 
+/*
+ *  Wall class from T138
+ *  Mother class with detection of neighbors
+ */ 
+class T129: public T138 
 { 
   public:
+    // Constructor
     T129(ISceneManager* smgr,
         IVideoDriver* driver,
         int x, int y, playground pg);
-
+    
+    // When the sphere touch the wall.
     virtual void sphereOverlap(Sphere &s, f32 xoverlap, f32 yoverlap);
+    // Return field's type
     virtual fieldtype getFieldType();
 };
 
